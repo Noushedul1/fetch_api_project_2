@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="./sass/style.css">
+</head>
+<body>
+    <div id="allemployeeDetails2" class="container">
+        <button id="allemployee2">All Employee</button>
+    </div>
+
+    <!-- start pagination  -->
+    <div class="container my-3">
+        <div class="pagina">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="page2.html">1</a></li>
+                  <li class="page-item"><a class="page-link" href="page3.html">2</a></li>
+                  <li class="page-item"><a class="page-link" href="page3.html">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- end pagination  -->
+    <script>
+        // start employee all 2
+        var btn2 = document.getElementById('allemployee2');
+        btn2.addEventListener('click',function(){
+            fetch('https://jsonplaceholder.typicode.com/users').
+            then((res)=> res.json())
+            .then((data)=>{
+            //    console.log(data[0]);
+            var outputs = "<h2>All Employee</h2>";
+            outputs += `
+            <div class="ervinHowell">
+                <p><strong>Id : ${data[3].id}</strong></p>
+                <p><strong>Name : ${data[3].name}</strong></p>
+                <p>Email : ${data[3].email}</p>
+                <p>City : ${data[3].address.city}</p>
+                <p>Zipcode : ${data[3].address.zipcode}</p>
+                <p>Latitude : ${data[3].address.geo.lat}</p>
+                <p>Longitude : ${data[3].address.geo.lng}</p>
+                <p>Phone : ${data[3].phone}</p>
+                <p>Company : ${data[3].company.name}</p>
+
+                <p><strong>Id : ${data[4].id}</strong></p>
+                <p><strong>Name : ${data[4].name}</strong></p>
+                <p>Email : ${data[4].email}</p>
+                <p>City : ${data[4].address.city}</p>
+                <p>Zipcode : ${data[4].address.zipcode}</p>
+                <p>Latitude : ${data[4].address.geo.lat}</p>
+                <p>Longitude : ${data[4].address.geo.lng}</p>
+                <p>Phone : ${data[4].phone}</p>
+                <p>Company : ${data[4].company.name}</p>
+
+                <p><strong>Id : ${data[5].id}</strong></p>
+                <p><strong>Name : ${data[5].name}</strong></p>
+                <p>Email : ${data[5].email}</p>
+                <p>City : ${data[5].address.city}</p>
+                <p>Zipcode : ${data[5].address.zipcode}</p>
+                <p>Latitude : ${data[5].address.geo.lat}</p>
+                <p>Longitude : ${data[5].address.geo.lng}</p>
+                <p>Phone : ${data[5].phone}</p>
+                <p>Company : ${data[5].company.name}</p>
+            </div>
+            `;
+            document.getElementById('allemployeeDetails2').innerHTML = outputs;
+            }).catch((err)=>{
+                console.log(err);
+            })
+        });
+// end employee all 2
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

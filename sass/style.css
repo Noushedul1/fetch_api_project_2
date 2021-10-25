@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+}
+
+#leanneGrahamDetails, #allemployeeDetails2, #allemployeeDetails3, #ervinHowellDetails, #clementineBauchDetails, #allemployeeDetails {
+  background-color: #ddd;
+  padding: 10px;
+}
+
+#leanneGraham, #allemployee2, #allemployee3, #ervinHowellDetails #ervinHowell, #clementineBauchDetails #clementineBauch, #allemployeeDetails #allemployee {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */

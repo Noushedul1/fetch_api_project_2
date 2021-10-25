@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+}
+// start employee 1 details 
+#leanneGrahamDetails{
+    background-color: #ddd;
+    padding: 10px;
+}
+#leanneGraham{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+#allemployeeDetails2{
+    @extend #leanneGrahamDetails;
+}
+#allemployee2{
+    @extend #leanneGraham;
+}
+#allemployeeDetails3{
+    @extend #leanneGrahamDetails;
+}
+#allemployee3{
+    @extend #leanneGraham;
+}
+// end employee 1 details 
+// start employee 2 details 
+#ervinHowellDetails{
+    @extend #leanneGrahamDetails;
+    #ervinHowell{
+        @extend #leanneGraham;
+    }
+}
+// start employee 2 details 
+// start employee 3 details 
+#clementineBauchDetails{
+    @extend #leanneGrahamDetails;
+    #clementineBauch{
+        @extend #leanneGraham;
+    }
+}
+// start employee 3 details 
+// start employee all details 
+#allemployeeDetails{
+    @extend #leanneGrahamDetails;
+    #allemployee{
+        @extend #leanneGraham;
+    }
+}
+// start employee all details 
